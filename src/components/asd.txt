@@ -1,0 +1,44 @@
+// import React, { useEffect, useState } from "react";
+// import { getLimit } from "@controller/FirebaseController"; // Sesuaikan dengan struktur file Anda
+
+// const Home: React.FC = () => {
+//   const [data, setData] = useState<any>(null); // Sesuaikan dengan tipe data yang diharapkan
+//   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       try {
+//         const retrievedData = await getLimit("1");
+//         setData(retrievedData);
+//         setIsLoading(false); // Setelah data diterima, berhenti loading
+//       } catch (error) {
+//         console.error(error);
+//         setIsLoading(false); // Berhenti loading jika terjadi kesalahan
+//       }
+//     };
+
+//     const interval = setInterval(() => {
+//       fetchData(); // Mengambil data secara berkala
+//     }, 1000); // Contoh polling setiap 5 detik
+
+//     fetchData();
+
+//     return () => {
+//       clearInterval(interval); // Membersihkan interval saat komponen tidak lagi digunakan
+//     };
+//   }, []);
+
+//   // console.log(data);
+//   return (
+//     <div>
+//       <h2>Display Data from Firebase</h2>
+//       {isLoading ? (
+//         <p>Loading...</p>
+//       ) : (
+//         <pre>{data ? JSON.stringify(data, null, 2) : "No data available"}</pre>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default Home;
